@@ -18,36 +18,48 @@ public class SwitchCaseDemo {
         System.out.println("Enter your second number.....:");
         int number2 = scanner.nextInt();
 
-        System.out.println(number1);
-        System.out.println(number2);
+        SwitchCaseDemo scd = new SwitchCaseDemo();
 
 
-        switch(choice){
+        //System.out.println(number1);
+        //System.out.println(number2);
+
+
+        switch (choice) {
 
             case 1:
-                int sum = number1+number2;
-                System.out.println("Sum of your numbers are.....:"+ sum);
+                //int sum = number1 + number2;
+                System.out.println("Sum of your numbers are.....:" + scd.sum(number1, number2));
                 break;
             case 2:
-                int sub = number1-number2;
-                System.out.println("Substraction  of your numbers are.....:"+sub);
+                int sub = number1 - number2;
+                System.out.println("Substraction  of your numbers are.....:" + scd.sub(number1, number2));
                 break;
             case 3:
-                int multi = number1*number2;
-                System.out.println("Multiplication  of your numbers are.....:"+multi);
+                int multi = number1 * number2;
+                System.out.println("Multiplication  of your numbers are.....:" + multi);
                 break;
             case 4:
-                int div = number1/number2;
-                System.out.println("Division  of your numbers are.....:"+div);
+                int div = number1 / number2;
+                System.out.println("Division  of your numbers are.....:" + div);
                 break;
             case 5:
-                int mod = number1%number2;
-                System.out.println("Modulus  of your numbers are.....:"+mod);
+                int mod = number1 % number2;
+                System.out.println("Modulus  of your numbers are.....:" + mod);
                 break;
             default:
                 System.out.println("Invalid input");
                 break;
-
         }
     }
+
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    public int sub(int a, int b) {
+        return a - b;
+    }
 }
+
+
